@@ -11,7 +11,8 @@ where the two agents are required to continue playing a game as long as possible
 for the position and the velocity of the ball and the racket.
 Each agent has own observation of states.
  - actions : The agent has 2 continuous actions.
- - rewards : +0.1
+ - rewards : +0.1 if an agent successfully hit the ball
+ and -0.01 if an agent missed to hit the ball or succeeded but the ball went outside of the boundary.
  - This is an episodic task,
  and the goal is to achieve an average score better than +0.5
  over 100 consecutive episodes,
@@ -57,13 +58,13 @@ to incorporate deep-reinforcement-learning submodule properly.
 Finally, create IPython kernel as below to run ipynb files:
 
 ```
-python -m ipkernel install --user --name env_name --display-name "env_name"
+python -m ipykernel install --user --name env_name --display-name "env_name"
 ```
 
 Please replace "env_name" with your virtual environment.
 
 ## run training and watch trained agent actions
-"my_Navigation.ipynb" is the main file of this repository.
+"my_Tennis.ipynb" is the main file of this repository.
 The first part is taken from the sample code provided by Udacity,
 and learning part for this is added (from cell #7).
 
