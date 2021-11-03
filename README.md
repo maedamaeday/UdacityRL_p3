@@ -10,7 +10,7 @@ where the two agents are required to continue playing a game as long as possible
  - states : The state consists of 8 kinds of values,
 for the position and the velocity of the ball and the racket.
 Each agent has own observation of states.
- - actions : The agent has 2 continuous actions.
+ - actions : The agent has 2 continuous values as an action.
  - rewards : +0.1 if an agent successfully hit the ball
  and -0.01 if an agent missed to hit the ball or succeeded but the ball went outside of the boundary.
  - This is an episodic task,
@@ -66,7 +66,7 @@ Please replace "env_name" with your virtual environment.
 ## run training and watch trained agent actions
 "my_Tennis.ipynb" is the main file of this repository.
 The first part is taken from the sample code provided by Udacity,
-and learning part for this is added (from cell #7).
+and learning part for this is added (from cell #5).
 
 Before running the notebook,
 you need to specify the Unity environment in the cell #2,
