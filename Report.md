@@ -54,9 +54,18 @@ In this example, 10 games (or episodes) are played,
 and the mean score is 1.55.
 Here, the agents act only based on their policy and do not take random action at all.
 In some episodes, they get almost no rewards, or fail to hit the ball at the very beginning,
-but in other episodes, they keep rally over several ten times.
+but in other episodes, they continue the rally dozens of times.
 
 ![demo of the trained agent](demo.gif)
 
-
 ## possible future improvement
+In this work, each agent is trained based on only states of itself,
+but it would be possible to include states of the other agent in training.
+In the real tennis case, each player decides how to move and hit the ball
+based on not only its own states, but also the other player states,
+so as to aim the position far from the other player, for example.
+In this project, since the goal is to continue the rally as long as possible,
+it would be desired to aim the position near the other player
+to minimize the risk of its missing the ball.
+Training of such collaborative way might give quicker learning
+than this work, where each agent considers only its own reward.
